@@ -1,0 +1,14 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+.svn/
+.sass-cache/
+
+*~
+*.swp
+*.log
+*.sublime-workspace
+*.sublime-project
+
+__IGNORE__
