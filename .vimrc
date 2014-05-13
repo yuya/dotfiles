@@ -17,8 +17,8 @@ NeoBundle 'Shougo/vimproc.vim', {
 \ }
 
 " NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimfiler.vim'
+" NeoBundle 'Shougo/unite.vim'
+" NeoBundle 'Shougo/vimfiler.vim'
 " NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'Lokaltog/vim-easymotion', '09c0cea8'
@@ -56,7 +56,7 @@ NeoBundleCheck
 set runtimepath+=~/.vim/
 runtime! userautoload/*.vim
 
-set laststatus=2
-set rtp+=~/.vim/neobundle/powerline/powerline/bindings/vim
-let g:Powerline_symbols = 'fancy'
+" set laststatus=2
+" set rtp+=~/.vim/neobundle/powerline/powerline/bindings/vim
+" let g:Powerline_symbols = 'fancy'
 

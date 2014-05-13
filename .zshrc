@@ -10,11 +10,10 @@ export LANG=ja_JP.UTF-8
 # PATH
 export PATH=/usr/local/sbin:/usr/local/bin:/opt/local/bin:$HOME/bin:$PATH:/usr/bin:/bin
 
-# # z
-# . `brew --prefix`/etc/profile.d/z.sh
-# function precmd () {
-#    z --add "$(pwd -P)"
-# }
+# z
+if which brew > /dev/null; then
+  source $(brew --prefix)/etc/profile.d/z.sh
+fi
 
 # git aliases
 alias g="git"
@@ -23,6 +22,8 @@ alias gfh="git fetch"
 alias gpl="git pull --no-edit"
 alias gps="git push"
 alias gck="git checkout"
+alias gch="git branch"
+alias gag="git tag"
 alias ga="git add"
 alias gc="git commit -v -m"
 alias gs="git status -s"
@@ -42,6 +43,30 @@ source ~/perl5/perlbrew/etc/bashrc
 # export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Android SDK
+ANDROID_SDK=~/Library/Developer/Android\ SDK
+export PATH=$PATH:${ANDROID_SDK}
+export PATH=$PATH:${ANDROID_SDK}/platform-tools
+export ANDROID_SDK_ROOT="$ANDROID_SDK"
+
+# Android NDK
+ANDROID_NDK=~/Library/Developer/Android\ NDK
+export PATH=$PATH:${ANDROID_NDK}
+export NDK_ROOT="$ANDROID_NDK"
+
+# Cocos2d-x
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=~/Library/Developer/Cocos2d-x\ 3.0/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable ANT_ROOT for Cocos2d-x
+export ANT_ROOT=/usr/local/bin
+export PATH=$ANT_ROOT:$PATH
+
+# Application Alias
+alias pyweb="python -m SimpleHTTPServer"
+alias sbl="subl"
 
 # w3m で ALC 検索
 function alc() {

@@ -4,6 +4,7 @@
 
 .svn/
 .sass-cache/
+node_modules/
 
 *~
 *.swp
@@ -12,3 +13,4 @@
 *.sublime-project
 
 __IGNORE__
+

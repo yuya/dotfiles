@@ -10,13 +10,16 @@ install tree || true
 install zsh || true
 install wget || true
 install curl || true
+
 install imagemagick || true
+install fontforge || true
 
 install jq || true
 install z || true
 install pngquant || true
 install rbenv || true
 install ruby-build || true
+install vim || true
 install w3m || true
 
 install nginx ||  true
@@ -30,6 +33,7 @@ cask install keyremap4macbook || true
 cask install bettertouchtool || true
 cask install quicksilver || true
 cask install onepassword || true
+cask install witch || true
 
 cask install path-finder || true
 cask install magican || true
@@ -53,6 +57,7 @@ cask install dash || true
 cask install sublime-text || true
 cask install xamarin-studio || true
 cask install eclipse-ide || true
+cask install sequel-pro || true
 
 cask install iterm2 || true
 cask install clipmenu || true
@@ -61,4 +66,5 @@ cask install nvalt || true
 cask install libreoffice || true
 cask install diskwave || true
 cask install lightpaper || true
+cask install gyazo || true
 
