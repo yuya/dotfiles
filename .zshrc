@@ -4,8 +4,19 @@ source ~/dotfiles/.zshrc.antigen
 autoload -U compinit
 compinit -u
 
+# PROMPT='%(?!🐵  !🙈  ?)'
+PROMPT='%(?!🐵 !🙈  ?) %(5~,%-2~/.../%2~,%~)%# '
+
 # 文字コード
 export LANG=ja_JP.UTF-8
+
+# zsh-completions
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# Editor
+# export EDITOR="vim"
+export EDITOR="~/Applications/MacVim.app/Contents/MacOS/Vim"
+alias vim='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 # PATH
 export PATH=/usr/local/sbin:/usr/local/bin:/opt/local/bin:$HOME/bin:$PATH:/usr/bin:/bin
@@ -39,6 +50,9 @@ fi
 # perlbrew
 source ~/perl5/perlbrew/etc/bashrc
 
+# pythonbrew
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
 # rbenv
 # export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -47,6 +61,7 @@ eval "$(rbenv init -)"
 # Android SDK
 ANDROID_SDK=~/Library/Developer/Android\ SDK
 export PATH=$PATH:${ANDROID_SDK}
+export PATH=$PATH:${ANDROID_SDK}/tools
 export PATH=$PATH:${ANDROID_SDK}/platform-tools
 export ANDROID_SDK_ROOT="$ANDROID_SDK"
 
@@ -86,3 +101,7 @@ function gte() {
 function gtj() {
   google_translate "$*" "ja-en"
 }
+
+# ps コマンドのプロセス名補完
+# zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
+
