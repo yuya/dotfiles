@@ -5,6 +5,11 @@
 .svn/
 .sass-cache/
 node_modules/
+metadata
+
+META.yml
+MYMETA.json
+MYMETA.yml
 
 *~
 *.swp
